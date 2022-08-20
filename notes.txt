@@ -1,0 +1,47 @@
+Key points that I did not understand very well:
+
+1) The definition "Make only the "addStarInterface" method visible for Framework users.
+Framework will be used both in Simulator and Real Device, make it work accordingly"
+
+Here, I got a bit confused. Exposing this method alone means that the demo app
+would to implement the functions, which is not a SDK should do, in my opinion.
+A SDK should provide easy-to-use methods that can perform complex tasks with
+one liners.
+
+So, I decided to expose a creator method (createInstance method) and
+also methods "addBigStar", "addSmallStar" and "reset". These
+will do the main job that the app can manage through button clicks,
+so it was enough for me to expose these alone. Other states such as
+saving the data, rotation changes etc... could've been handled internally,
+which I've done like those as much as possible.
+
+2) It was not clear if the buttons were supposed to be added inside the webview,
+or below the webview as 3 different buttons.
+
+Yes, it was defined as "Add 3 buttons to the bottom of the webview" but
+I couldn't understand if I should add them with HTML and pass it onto webview,
+or add them manually using a layout. So, I've chosen the option to add
+it via a layout. It may not be right, but this is what I've understood. If it was
+not supposed to be like this, then I am sorry.
+
+3) A webview is usually used with visual representations. When I've read the statement
+"When I click on the Small/Big Star, a new item should be added to the array of star objects.",
+it get me a bit confused.
+
+I did not really understand if I should show some stars on the webview, big ones or
+small ones depending on the random attributes. It was mentioned that some "console"
+logs were required, so I've added them and left it at that. I hope that was
+the correct approach.
+
+
+P.S: I don't really know the area of Javascript and I almost have no experience
+with it, so the code blocks on Javascript side or Android WebView side
+could be a mess or vulnerable. However, I am eager to learn how the security
+works in these areas.
+
+If the case study was also understandable to all others but me, then
+it means I need to improve myself a lot more as well, and I will be keep
+working on it.
+
+Best regards,
+Furkan Yurdakul
